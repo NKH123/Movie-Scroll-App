@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
+import { FilterPipe }from './filter.pipe.service';
+// import { MatInputModule } from '@angular/material/input';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppTitleBarComponent } from './app-title-bar/app-title-bar.component';
@@ -15,12 +16,14 @@ import { AppMovieCardListComponent } from './app-movie-card-list/app-movie-card-
     AppComponent,
     AppTitleBarComponent,
     AppMovieCardComponent,
-    AppMovieCardListComponent
+    AppMovieCardListComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [ MovieData ],
   bootstrap: [AppComponent]

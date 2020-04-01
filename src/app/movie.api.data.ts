@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http'
 export class MovieData{
     constructor(private http: HttpClient){}
 
-    fetchMovieData(){
-        return this.http.get('/assets/data/movie.json')
+    fetchMovieData(url:string){
+        return this.http.get(url)
     }
 }
