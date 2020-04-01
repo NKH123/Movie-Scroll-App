@@ -1,5 +1,4 @@
 import { Component,  OnInit, Input, ChangeDetectionStrategy  } from '@angular/core';
-import { FilterPipe } from '../filter.pipe.service'
 import { GetMovieApiService } from '../get-movie-api.service';
 @Component({
   selector: 'app-app-movie-card-list',

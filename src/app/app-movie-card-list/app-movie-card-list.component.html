@@ -10,28 +10,15 @@
      
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" [(ngModel)]="searchText" type="search" placeholder="Search"  aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <input class="form-control mr-sm-2" [(ngModel)]="searchText" type="text" name="search" placeholder="Search"  aria-label="Search">
+        <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> --> 
       </form>
     </div>
-
+{{searchText}}
   </nav>
 <div class="row-fluid">
     <div class="col-lg-12 col-md-10 ">
         <div class="cover-container">
-           
-            <!-- <div class="cover-item" >
-                <div class="card bg-light mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Quantum Of Silence</div>
-                    <div class="card-body">
-                      <img class="card-img-bottom" src="../../assets/a.png" alt="Card image cap">
-                    </div>
-                    <div class="card-footer">
-                        <a class="btn btn-outline-secondary btn-block" href="#" role="button">Like</a>
-                        <a class="btn btn-outline-secondary btn-block" href="#" role="button">Own</a>
-                    </div>
-                  </div>
-            </div> -->
             <div class="card bg-light mb-3 cover-item" *ngFor="let movie of movies | filter:searchText " style="max-width: auto;">
               <div class="card-header">{{movie.title}}</div>
               <div class="card-body">
