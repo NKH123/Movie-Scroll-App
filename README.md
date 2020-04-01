@@ -6,6 +6,6 @@ This project lists movies from themoviedatabase and was generated with [Angular 
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-##App deployed on Heroku
+## App deployed on Heroku
 
 Visit https://movie-scroll.herokuapp.com/
