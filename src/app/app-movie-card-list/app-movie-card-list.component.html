@@ -1,11 +1,8 @@
-
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Movie Scroll</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"  (click)="isCollapsed = !isCollapsed" aria-label="Toggle navigation" [attr.aria-expanded]="!isCollapsed" >
       <span class="navbar-toggler-icon"></span>
     </button>
-  
     <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngbCollapse]="isCollapsed">
       <ul class="navbar-nav mr-auto">
       </ul>  
@@ -27,9 +24,6 @@
                   <a class="btn btn-outline-secondary btn-block" href="#" role="button">Own</a>
               </div>
             </div>
-           
         </div>
     </div>
 </div>
-
-<!-- <img *ngFor="let movie of movies | filter:searchText " src="{{movie.poster_path}}" alt="{{movie.title}}+' image'"> -->
