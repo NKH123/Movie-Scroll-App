@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -25,7 +26,8 @@ import { AppMovieCardListComponent } from './app-movie-card-list/app-movie-card-
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    NgbModule
   ],
   providers: [ MovieData ],
   bootstrap: [AppComponent]

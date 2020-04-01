@@ -7,7 +7,7 @@ import { GetMovieApiService } from '../get-movie-api.service';
 })
 export class AppMovieCardListComponent implements OnInit {
   searchText;
-
+  isCollapsed = false;
   movies = [];
 
   constructor(private dataService: GetMovieApiService) { }
