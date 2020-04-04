@@ -9,3 +9,8 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 ## App deployed on Heroku
 
 Visit https://movie-scroll.herokuapp.com/
+
+##TODO
+-[ ] Pagination
+-[ ] Do not use the local API, use tmdb API
+-[ ] Change the search functionality from pipe to tmdb API
