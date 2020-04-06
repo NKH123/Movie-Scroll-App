@@ -1,6 +1,6 @@
 import { Component,  OnInit, Input, ChangeDetectionStrategy, HostListener  } from '@angular/core';
-import { GetMovieApiService } from '../get-movie-api.service';
 import { MovieDataService } from '../services/movie-data.service';
+import { MovieSearchService } from '../services/movie-search.service';
 @Component({
   selector: 'app-app-movie-card-list',
   templateUrl: './app-movie-card-list.component.html',
@@ -8,7 +8,7 @@ import { MovieDataService } from '../services/movie-data.service';
 })
 export class AppMovieCardListComponent implements OnInit {
   searchText;
-  isCollapsed = false;
+  isCollapsed = true;
   movies: Array<any>
   totalRecords="10"
  
@@ -17,7 +17,7 @@ export class AppMovieCardListComponent implements OnInit {
 
   page="1"
 
-  constructor(private dataService: MovieDataService) {
+  constructor(private dataService: MovieDataService, private dataService1: MovieSearchService) {
     this.movies=new Array<any>()
    }
     
@@ -33,6 +33,14 @@ export class AppMovieCardListComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
     onResize(event) {
       this.innerWidth = window.innerWidth;
+  
+}
+searchOnClick(){
+  this.dataService1.getData(this.searchText).subscribe((data)=>{
+    console.log(data);
+    this.movies = data.results;
+    this.totalRecords=data.results.length
+  })  
 }
 
 }

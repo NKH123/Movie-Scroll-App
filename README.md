@@ -13,4 +13,4 @@ Visit https://movie-scroll.herokuapp.com/
 ## TODO
 - [x] Pagination
 - [x] Do not use the local API, use tmdb API
-- [ ] Change the search functionality from pipe to tmdb API
+- [x] Change the search functionality from pipe to tmdb API

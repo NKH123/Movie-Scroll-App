@@ -6,18 +6,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AppTitleBarComponent } from './app-title-bar/app-title-bar.component';
-import { AppMovieCardComponent } from './app-movie-card/app-movie-card.component';
 import { AppMovieCardListComponent } from './app-movie-card-list/app-movie-card-list.component';
-import { NgbdPaginationBasic } from './pagination-basic';
 import { NgxPaginationModule } from 'ngx-pagination'
 @NgModule({
   declarations: [
     AppComponent,
-    AppTitleBarComponent,
-    AppMovieCardComponent,
-    AppMovieCardListComponent,
-    NgbdPaginationBasic
+    AppMovieCardListComponent
   ],
   imports: [
     BrowserModule,
@@ -28,8 +22,8 @@ import { NgxPaginationModule } from 'ngx-pagination'
     NgbModule,
     NgxPaginationModule
   ],
-  exports: [NgbdPaginationBasic],
+  exports: [],
   providers: [],
-  bootstrap: [AppComponent, NgbdPaginationBasic]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
