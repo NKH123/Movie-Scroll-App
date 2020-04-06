@@ -9,12 +9,15 @@ import { AppComponent } from './app.component';
 import { AppTitleBarComponent } from './app-title-bar/app-title-bar.component';
 import { AppMovieCardComponent } from './app-movie-card/app-movie-card.component';
 import { AppMovieCardListComponent } from './app-movie-card-list/app-movie-card-list.component';
+import { NgbdPaginationBasic } from './pagination-basic';
+import { NgxPaginationModule } from 'ngx-pagination'
 @NgModule({
   declarations: [
     AppComponent,
     AppTitleBarComponent,
     AppMovieCardComponent,
-    AppMovieCardListComponent
+    AppMovieCardListComponent,
+    NgbdPaginationBasic
   ],
   imports: [
     BrowserModule,
@@ -22,9 +25,11 @@ import { AppMovieCardListComponent } from './app-movie-card-list/app-movie-card-
     HttpClientModule,
     FormsModule,
     Ng2SearchPipeModule,
-    NgbModule
+    NgbModule,
+    NgxPaginationModule
   ],
+  exports: [NgbdPaginationBasic],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, NgbdPaginationBasic]
 })
 export class AppModule { }
